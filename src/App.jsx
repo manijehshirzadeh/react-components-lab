@@ -1,3 +1,6 @@
+import "./App.css";
+import WeatherForecast from "./components/WeatherForecast/WeatherForecast.jsx";
+
 const App = () => {
   const weatherForecasts = [
     {
@@ -39,7 +42,17 @@ const App = () => {
 
   return (
     <>
-      <h1>Hello world!</h1>;<section></section>;
+      <h1>Local Weather</h1>
+      <section>
+        <ul>
+          {weatherForecasts.map((weatherForecast) => (
+            <WeatherForecast
+              key={weatherForecast.day}
+              weatherForecast={weatherForecast}
+            />
+          ))}
+        </ul>
+      </section>
     </>
   );
 };

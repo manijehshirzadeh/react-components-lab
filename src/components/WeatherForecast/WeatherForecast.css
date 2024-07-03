@@ -12,3 +12,7 @@ section .weather {
 .weather span {
   font-weight: bold;
 }
+
+ul {
+  display: flex;
+}
